@@ -1,0 +1,80 @@
+---
+import Container from "../components/Container.astro";
+import Badge from "../components/Badge.astro";
+import BadgeContact from "../components/BadgeContact.astro";
+import Gmail from "../components/icons/Gmail.astro";
+import Whatsapp from "../components/icons/Whatsapp.astro";
+---
+
+<Container>
+  <div class="intro">
+    <div class="intro__avatar">
+      <img src="/images/alxcodes-opt.png" alt="Alejandro Figueroa photo" />
+      <Badge>Disponible para trabajar</Badge>
+    </div>
+    <h1 class="intro__heading">Hola, soy Alex.</h1>
+    <p
+      class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+    >
+      Desarrolador web en CDMX 🇲🇽. +20 años de experiencia. Experto en
+      WordPress. <strong
+        >Especializado en crear experiencias web únicas y efectivas.</strong
+      > Atencion al detalle. Comunicación asertiva. Gran ojo para el diseño. SEO
+      friendly.
+    </p>
+    <nav class="flex flex-wrap gap-4 mt-8">
+      <BadgeContact link="mailto:aleckzf@gmail.com"
+        ><Gmail /> Contáctame</BadgeContact
+      >
+      <BadgeContact link="https://wa.me/+5213311477587"
+        ><Whatsapp /> Whatsapp</BadgeContact
+      >
+    </nav>
+  </div>
+</Container>
+
+<style>
+  .intro {
+    max-width: 36rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .intro__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-block: 1rem;
+  }
+  .intro__avatar img {
+    border-radius: calc(infinity * 1px);
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+  .intro__heading {
+    font-size: 1.875rem /* 30px */;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .intro__heading:where(.dark, .dark *) {
+  }
+  .intro__content {
+  }
+  @media (width >= 32rem) {
+    .intro {
+      padding-block: 4rem; /* 96px */
+    }
+    .intro__heading {
+      flex-direction: row;
+    }
+  }
+  @media (width >= 64rem) {
+    .intro {
+      padding-block: 6rem; /* 128px */
+    }
+    .intro__heading {
+      font-size: 3rem /* 48px */;
+      line-height: 1;
+    }
+  }
+</style>

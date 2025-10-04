@@ -1,0 +1,59 @@
+---
+import Container from "./Container.astro";
+const { class: className } = Astro.props;
+const classes = ["header", className];
+---
+
+<header class:list={classes}>
+  <Container>
+    <nav class="header-inner">
+      <ul
+        class="top-level-menu flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+      >
+        <li
+          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+        >
+          <a href="#experience" class="text-blue-500">Experiencia</a>
+        </li>
+        <!-- <li
+          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+        >
+          <a href="#about">Proyectos</a>
+        </li> -->
+        <li
+          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+        >
+          <a href="#about">Sobre mí</a>
+        </li>
+        <li
+          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+        >
+          <a href="mailto:aleckzf@gmail.com">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+  </Container>
+</header>
+
+<style>
+  .header-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .top-level-menu {
+    display: flex;
+    column-gap: 40px;
+    opacity: 0.9;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .top-level-menu li {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  @media (width >= 64rem) {
+  }
+</style>
