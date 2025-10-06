@@ -9,4 +9,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: 'https://alx-codes.github.io',
+  base: 'alex-dev-cv'
 });
