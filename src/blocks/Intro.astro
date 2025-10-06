@@ -1,0 +1,46 @@
+---
+import Container from "../components/Container.astro";
+import Badge from "../components/Badge.astro";
+import BadgeContact from "../components/BadgeContact.astro";
+import Gmail from "../icons/Gmail.astro";
+import Whatsapp from "../icons/Whatsapp.astro";
+---
+
+<Container>
+  <section
+    id="intro"
+    data-section="intro"
+    class="section max-w-xl py-8 lg:py-24 md:py-36"
+  >
+    <div class="flex gap-4 mb-4">
+      <img
+        class="rounded-full shadow-lg size-16"
+        src="/images/alxcodes-opt.png"
+        alt="Alejandro Figueroa photo"
+      />
+      <Badge>Disponible para trabajar</Badge>
+    </div>
+    <h1
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    >
+      Hola, soy Alex.
+    </h1>
+    <p
+      class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+    >
+      Desarrolador web en CDMX 🇲🇽. +20 años de experiencia. Experto en
+      WordPress. <strong
+        >Especializado en crear experiencias web únicas y efectivas.</strong
+      > Atencion al detalle. Comunicación asertiva. Gran ojo para el diseño. SEO
+      friendly.
+    </p>
+    <nav class="flex flex-wrap gap-4 mt-8">
+      <BadgeContact link="mailto:aleckzf@gmail.com"
+        ><Gmail /> Contáctame</BadgeContact
+      >
+      <BadgeContact link="https://wa.me/+5213311477587"
+        ><Whatsapp /> Whatsapp</BadgeContact
+      >
+    </nav>
+  </section>
+</Container>
